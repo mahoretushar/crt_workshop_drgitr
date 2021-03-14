@@ -1,0 +1,921 @@
+#+TITLE: Current Work
+#+AUTHOR: Wolf
+
+* Guess the output (Day 2 & 3)
+** Day 2
+*** Q.1.
+
+#+begin_src cpp
+#include<stdio.h>
+
+#define x 5+2
+
+int main() {
+  int i;
+  i = x*x*x;
+  printf("i is %d",i);
+  return 0;
+}
+#+end_src
+
+a. 343
+b. 27
+c. compiler error
+d. 21
+
+*** Q.2.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int n = 65;
+
+  switch(n) {
+    case 64:
+      printf("Case 64");
+      break;
+    case 'A':
+      printf("Case A");
+      break;
+    default:
+      printf("Default Case");
+  }
+  return 0;
+}
+#+end_src
+
+a. Case 64
+b. Case A
+c. Default Case
+d. Compiler Error: Incompatible datatypes in case lable and switch expression
+
+*** Q.3.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i = 1;
+  switch(i) {
+    case 1:
+      printf("Hi");
+    default:
+      printf("Bye");
+  }
+  return 0;
+}
+#+end_src
+
+a. Compilation Error
+b. Bye
+c. Hi
+d. Hi Bye
+
+*** Q.4.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i = 65;
+  switch(i) {
+    case 65:
+      printf("Integer 65");
+      break;
+    case 'A':
+      printf("Char 65");
+      break;
+    default:
+      printf("Bye");
+  }
+  return 0;
+}
+#+end_src
+
+a. Char 65
+b. Integer 65
+c. Bye
+d. Compilation Error
+
+*** Q.5.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i = 1;
+  i++;
+  switch(i--) {
+    case 1:
+      printf("Case 1 is Executed");
+      break;
+    case 2:
+      printf("Case 2 is Executed");
+      break;
+    default:
+      printf("Default Block is Executed");
+  }
+  return 0;
+}
+#+end_src
+
+a. Case 2 is Executed
+b. Case 1 is Executed
+c. Default Block is Executed
+d. Compilation Error
+
+*** Q.6.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int a=7;
+  switch(a) {
+    case 1:
+    case 5:
+    case 6:
+      printf("Mumbai");
+      break;
+    case 2:
+      printf("Amravati");
+      break;
+    case 3:
+    case 7:
+    case 10:
+      printf("Nagpur");
+      break;
+    default:
+      printf("Pune");
+      break;
+  }
+  return 0;
+}
+#+end_src
+
+a. Nagpur
+b. Pune
+c. Amravati
+d. Compiler Error
+
+*** Q.7.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  const int a = 1;
+  const int b = 2;
+
+  switch(a) {
+    case a:
+      printf("Mumbai");
+      break;
+    case b:
+      printf("Amravati");
+      break;
+    case 3:
+      printf("Nagpur");
+      break;
+    default:
+      printf("Pune");
+      break;
+  }
+  return 0;
+}
+#+end_src
+
+ a. Mumbai
+ b. Amravati
+ c. Nagpur
+ d. Pune
+ e. Compiler Error
+
+*** Q.8.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  switch(printf("hi")) {
+    case 1:
+      printf("Mumbai");
+      break;
+    case 2:
+      printf("Amravati");
+      break;
+    case 3:
+      printf("Nagpur");
+      break;
+    case 4:
+      printf("Pune");
+      break;
+    default:
+      printf("Delhi");
+      break;
+  }
+  return 0;
+}
+#+end_src
+
+ a. hi
+ b. Pune
+ c. 4
+ d. hiPune
+ e. Compiler Error
+
+*** Q.9.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int a = 5;
+  switch(a) {
+    case 1:
+      printf("Mumbai");
+      break;
+    case 2:
+      printf("Amravati");
+      break;
+    case 3:
+      printf("Nagpur");
+      break;
+    case 4:
+      printf("Pune");
+      break;
+    //default:
+    //  printf("Delhi");
+    //  break;
+  }
+  return 0;
+}
+#+end_src
+
+a. Compiler Error:Default Missing
+b. Empty Output Screen with Successful Compilation and Execution
+c. Compiler Error:Case 5 unavailable
+d. Pune
+
+*** Q.10.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int a=3;
+  switch(a) {
+
+  }
+  return 0;
+}
+#+end_src
+
+a. error:case missing
+b. error:ambigious switch case
+c. Returns Garbage Value
+d. Empty O/P Screen with successful compilation and execution
+
+*** Q.11.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  if('A'<'a')
+    printf("Hi");
+  else
+    printf("Bye");
+  return 0;
+}
+#+end_src
+
+a. Hi
+b. Bye
+c. Compilation Error
+d. Runtime Error
+
+*** Q.12.
+
+#+begin_src cpp
+#include<stdio.h>
+#define TEST 5
+
+int main() {
+  printf("TEST");
+  return 0;
+}
+#+end_src
+
+a. Compilation Error
+b. 5
+c. TEST
+d. 10
+
+*** Q.13.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int x=25;
+  if(x=10)
+    printf("TRUE");
+  else
+    printf("FALSE");
+  return 0;
+}
+#+end_src
+
+a. TRUE
+b. FALSE
+c. Error
+d. None
+
+*** Q.14. Which of the following are incorrect Statement? If int a=10
+
+1) if(a==10) printf("Hi")
+2) if(10==a) printf("Hi")
+3) if(a=10)  printf("Hi")
+4) if(10=a)  printf("Hi")
+
+**Options**
+a. 3 and 4
+b. 3 only
+c. 4 only
+d. 1,3 and 4
+
+*** Q.15.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i=1;
+  for(printf("Hi ");i<=3;i++) {
+    printf("Hello Batman No. %d ",i);
+  }
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.16.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i=1;
+  for(printf("Hi ");i<=3;printf("Hello ")) {
+    i++;
+  }
+  return 0:
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.17.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i=0;
+  for(printf("Hi ");i<printf("Hello ");printf("Bye ")) {
+    printf("No. %d ",i);
+    i++;
+  }
+  return 0;
+}
+#+end_src
+
+**Write Down the output**
+
+*** Q.18.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i=1;
+  for( ;i<3; ) {
+    printf("Hello Batman No. %d ",i);
+  }
+  return 0;
+}
+#+end_src
+
+**Write Down the output**
+
+*** Q.19.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  for(;;) {
+    printf("Batman is Dangerous");
+  }
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.20.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int k=30;
+  printf("%d %d  %d",k<=30,k=40,k==30);
+  return 0;
+}
+#+end_src
+
+a. 1 40 0
+b. Compilation Error
+c. 0 40 1
+d. Run Time Error
+
+** Day 3
+*** Q.21.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i;
+  for(i=0;i<=5;i++); {
+    printf("Hi %d ",i);
+  }
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.22.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int _=1;
+  int __=2;
+  int ___=_+__;
+  printf("%d %d %d",_,__,___);
+  return 0;
+}
+#+end_src
+
+a. Compilation Error
+b. 1 2 3
+c. 3 2 1
+d. None
+*** Q.23.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int a=5,b=3;
+  printf("%d",++(a*b+1));
+  return 0;
+}
+#+end_src
+
+#+RESULTS:
+
+a. Error
+b. 17
+c. 15
+d. None
+
+*** Q.24.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int a = 5;
+  a = printf("good") + printf("boy");
+  printf("%d",a);
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.25.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int a,b,c;
+  c=4;
+  a=b=c;
+  c=a==b;
+  printf("c:%d",c);
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+*** Q.26.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i = 10;
+  i = !i>14;
+  printf("%d",i);
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.27.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i;
+  i= 10+010+0x20;
+  printf("%d",i);
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.28. Iterate Numbers from 1 to 10 without using any loop
+*** Q.29. Represent Infinite Loop in GOTO
+*** Q.30. Creating Infinite loop in a **Function**
+
+#+begin_src cpp
+#include<stdio.h>
+
+int print();
+
+int main() {
+  print();
+  return 0;
+}
+
+int print() {
+  printf("This is a Function");
+}
+#+end_src
+
+*** Q.31.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int a,x;
+  a = 5, x = a++;
+  printf("%d %d ",x,a);
+
+  a = 5, x = ++a;
+  printf("%d %d ",x,a);
+
+  a = 5, x = a--;
+  printf("%d %d ",x,a);
+
+  a = 5, x = --a;
+  printf("%d %d ",x,a);
+
+  return 0;
+}
+#+end_src
+
+**Write Down the output**
+
+*** Q.32.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int a = 6;
+  printf("%d ",a--);
+  printf("%d ",++a);
+  printf("%d ",a++);
+  return 0;
+}
+#+end_src
+
+**Write Down the output**
+
+*** Q.33.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int x = 2;
+  printf("%d %d %d",x*x,++x,x++);
+  return 0;
+}
+#+end_src
+
+**Write Down the output**
+
+*** Q.34.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  float me = 1.1;
+  double you = 1.1;
+  if(me==you)
+    printf("Something is Wrong");
+  else
+    printf("Everything is Fine");
+  return 0;
+}
+#+end_src
+
+**Write Down the output**
+
+*** Q.35.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int x;
+  x = 20;
+  x*=30+5;
+  printf("%d",x);
+  return 0;
+}
+#+end_src
+
+**Write Down the output**
+
+*** Q.36.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int x=1;
+  if(x==2)
+  printf("Hi ");
+  printf("Hello");
+  return 0;
+  }
+#+end_src
+
+**Write Down the Output**
+
+*** Q.37. How many times 'Hi' will be Printed
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i=1;
+
+  while(i<10) {
+    printf("Hello ");
+  }
+  printf("Hi ");
+  return 0;
+}
+#+end_src
+
+*** Q.38. How many times 'Hello' gets printed
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int a = 10, b = 20;
+
+  do {
+    printf("Hell0 ");
+  }
+  while(a>b);
+
+  printf("Hi ");
+  return 0;
+}
+#+end_src
+
+*** Q.39.
+
+#+begin_src cpp
+#include<stdio.h>
+
+void f(int *p,int *q) {
+  p=q;
+  ,*p=2;
+}
+
+int i=0,j=1;
+
+int main() {
+  f(&i,&j);
+  printf("%d %d",i,j);
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.40. Whats wrong in the Given Code.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i, c = 0, n = 7;
+  for(i=0;i<=10;i++) {
+    if(n%i==0) {
+      c++;
+    }
+    if(c==2)
+      printf("Prime");
+    else
+      printf("Not Prime");
+    }
+  return 0;
+}
+#+end_src
+
+*** Q.41.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int x=10,y=15;
+  if(++x>10||++y>15) {
+    x++;
+  }
+  else {
+    y++;
+  }
+  printf("x:%d y:%d",x,y);
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.42.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int x=10,y=15;
+  if(++x<10 && ++y>15) {
+    x++;
+  }
+  else {
+    y++;
+  }
+  printf("x:%d y:%d",x,y);
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.43.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int a = 1, b = 2, c = 3, d = 4;
+  int x;
+  x = a = b = c = d;
+  printf("%d",x);
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.44.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int x;
+  x  = printf("Hello%d ",100);
+  printf("%d",x);
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.45.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int x;
+  x = printf("%d ",printf("Hello "));
+  printf("%d",x);
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+*** Q.46
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int a;
+  a = printf("Hi%dWolf",printf("Mumbai"));
+  printf("%d",a);
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.47.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int x;
+  x = printf("%d",printf("Hi"),printf("Hello"),printf("GoodMorning"));
+  printf("%d",x);
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.48.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int i = 2, j = 2;
+  while(i+1?--i:--j) {
+    printf("%d ",i);
+  }
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.49.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int x=3, y=3;
+  while(--x&&--y) {
+    printf(" %d %d",x,y);
+  }
+  return 0;
+}
+#+end_src
+
+**Write Down the Output**
+
+*** Q.50.
+
+#+begin_src cpp
+#include<stdio.h>
+
+int main() {
+  int x,y,z,a;
+  y=2;
+  if(x=y%2)
+    z=2;
+  a=2;
+  printf("%d %d %d",z,x,a);
+  return 0;
+}
+#+end_src
